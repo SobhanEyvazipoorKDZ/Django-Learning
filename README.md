@@ -1,2 +1,4 @@
 # Django Learning
-Notes, exercises, and projects from my Django learning course.
+
+Learning Django step by step with commits documenting my progress from Maktabkhooneh Django learning
+course instructed by Ali Bigdeli.
