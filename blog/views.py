@@ -54,7 +54,9 @@ def blog_single(request, pid):
 def blog_search(request):
     posts = Post.objects.filter(status=1)
     if request.method == 'GET':
-        if s := request.GET.get('s'):
+        # if s := request.GET.get('s'): #use this just for python version 3.8 and above
+        if request.GET.get('s'):
+            s =  request.GET.get('s')
             posts = posts.filter(content__contains=s)
     context = {'posts': posts}
     return render(request, 'blog/blog-home.html', context=context)
